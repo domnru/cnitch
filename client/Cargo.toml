@@ -1,0 +1,16 @@
+[package]
+name = "cnitch-client"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+incremental = false
+strip = true 
+codegen-units = 1
+
+[dependencies]
+reqwest ={ version = "0.12.5" }
+tokio = { version = "1.38.0", features = ["macros", "rt-multi-thread"] }

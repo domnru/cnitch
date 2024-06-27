@@ -1,0 +1,17 @@
+services:
+  cnitch:
+    image: cnitch:latest
+    build: 
+      context: 'server'
+      dockerfile: arm64.Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SECRET=ABCABCABCABC
+      - PORT=8080
+
+  target:
+    image: debian
+    environment:
+      - CNITCH_HOST=cnitch:8080
+    command: sleep infinity

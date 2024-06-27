@@ -1,0 +1,15 @@
+[package]
+name = "cnitch-server"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+incremental = false
+strip = true 
+codegen-units = 1
+
+[dependencies]
+chrono = { version = "0.4.38", features = ["now"] }
