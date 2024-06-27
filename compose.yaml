@@ -3,7 +3,7 @@ services:
     image: cnitch:latest
     build: 
       context: 'server'
-      dockerfile: arm64.Dockerfile
+      dockerfile: x86.Dockerfile
     ports:
       - "8080:8080"
     environment:
