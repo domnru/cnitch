@@ -81,7 +81,4 @@ cnitch (Command Snitch) is a security tool designed to monitor unauthorized acce
       **Example with curl**
       ```bash
       curl -X POST -H "Content-Type: text/plain" -d "${SECRET}" http://${CNITCH_HOST}
-
-      
-      
-   
+      ```
